@@ -12,6 +12,6 @@ const Footer = () => {
         </section>
         </footer>
     )
-}
+} 
 
 export default Footer

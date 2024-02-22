@@ -3,8 +3,8 @@ import Footer from '../components/Footer'
 
 const Home = () => {
 return (
-    <div>
-    <Header />
+    <div> 
+    <Header link1='ACCUEIL' link2='A PROPOS'/>
     <Footer />
     </div>
 )
