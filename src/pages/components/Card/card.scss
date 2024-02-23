@@ -1,0 +1,16 @@
+.card {
+      position: relative;
+      &__img {
+            width: 100%;
+            height: 255px;
+            object-fit: cover;
+            border-radius: 12px;
+      }
+      &__title {
+            color: red;
+            position: absolute;
+            z-index: 2;
+            font-size: 18px;
+            top: 188px;
+      }
+}
