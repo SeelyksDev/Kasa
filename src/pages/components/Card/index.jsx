@@ -1,6 +1,6 @@
 import './card.scss'
 
-const Card = ({ id, cover, title }) => {
+const Card = ({ cover, title }) => {
       return (
             <div className="card">
                   <img className="card__img" src={cover} alt={title} />

@@ -5,6 +5,7 @@ import './index.css'
 import Home from './pages/Home/index'
 import About from './pages/About/index'
 import Error from './pages/Error/index'
+import LocationList from '../src/datas/locationList.json'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(

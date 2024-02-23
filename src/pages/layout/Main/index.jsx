@@ -7,13 +7,15 @@ const Main = () => {
       return (
             <main className="main">
                   <HeroBanner />
-                  {LocationList.map((location) => (
-                        <Card
-                              key={location.id}
-                              cover={location.cover}
-                              title={location.title}
-                        />
-                  ))}
+                  <section className="cardContainer">
+                        {LocationList.map((location) => (
+                              <Card
+                                    key={location.id}
+                                    cover={location.cover}
+                                    title={location.title}
+                              />
+                        ))}
+                  </section>
             </main>
       )
 }

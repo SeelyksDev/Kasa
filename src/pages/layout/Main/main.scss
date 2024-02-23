@@ -1,3 +1,9 @@
 .main {
       margin: 27px;
 }
+
+.cardContainer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 27px;
+}
