@@ -4,11 +4,11 @@ import Main from '../layout/Main/index'
 
 const Home = () => {
       return (
-            <body>
+            <section>
                   <Header />
                   <Main />
                   <Footer />
-            </body>
+            </section>
       )
 }
 
