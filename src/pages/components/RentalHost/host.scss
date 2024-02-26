@@ -1,0 +1,8 @@
+@import '../../../utils/styles/variables.scss';
+
+.host {
+      &__name {
+            color: $primary-color;
+            font-size: 12px;
+      }
+}

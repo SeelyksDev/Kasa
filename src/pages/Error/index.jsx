@@ -1,16 +1,15 @@
-import RouteError from '../../assets/404.svg'
 import Header from '../layout/Header/index'
 import Footer from '../layout/Footer/index'
+import './error.scss'
+import MainError from '../layout/MainError'
 
 const Error = () => {
       return (
-            <div>
+            <section>
                   <Header />
-                  <main>
-                        <img src={RouteError} alt="Erreur 404" />
-                  </main>
+                  <MainError />
                   <Footer />
-            </div>
+            </section>
       )
 }
 

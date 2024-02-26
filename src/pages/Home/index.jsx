@@ -1,12 +1,12 @@
-import Header from '../layout/Header/index'
+import Header from '../layout/Header/index.jsx'
+import MainHome from '../layout/MainHome/index'
 import Footer from '../layout/Footer/index'
-import Main from '../layout/Main/index'
 
 const Home = () => {
       return (
             <section>
                   <Header />
-                  <Main />
+                  <MainHome />
                   <Footer />
             </section>
       )

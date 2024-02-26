@@ -1,0 +1,21 @@
+@import '../../../utils/styles/variables.scss';
+
+.tagsContainer {
+      display: flex;
+      &__tag {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            background-color: $primary-color;
+            margin-right: 5px;
+            border-radius: 5px;
+            height: 18px;
+            width: 84px;
+      }
+      &__text {
+            color: white;
+            font-weight: 700;
+            font-size: 10px;
+      }
+}

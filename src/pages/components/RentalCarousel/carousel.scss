@@ -1,0 +1,23 @@
+.carousel {
+      position: relative;
+      width: 100%;
+      height: 255px;
+      &__img {
+            object-fit: cover;
+            border-radius: 10px;
+            width: 100%;
+            height: 100%;
+      }
+      &__arrowleft {
+            position: absolute;
+            left: 0px;
+            top: 127.5px;
+            width: 24px;
+      }
+      &__arrowright {
+            position: absolute;
+            right: 0px;
+            top: 127.5px;
+            width: 24px;
+      }
+}

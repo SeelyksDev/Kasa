@@ -1,0 +1,27 @@
+@import '../../../utils/styles/variables.scss';
+
+.main-error {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 80px;
+      &__404 {
+            margin: 0;
+            margin-top: 80px;
+            font-size: 96px;
+            color: $primary-color;
+      }
+
+      &__text {
+            text-align: center;
+            font-size: 18px;
+            color: $primary-color;
+            min-width: 223px;
+            width: 60%;
+      }
+      &__redirection {
+            color: $secondary-color;
+            font-size: 14px;
+            margin-bottom: 80px;
+      }
+}
