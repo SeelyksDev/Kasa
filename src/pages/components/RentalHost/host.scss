@@ -1,8 +1,21 @@
 @import '../../../utils/styles/variables.scss';
 
 .host {
+      display: flex;
+      align-items: center;
       &__name {
+            text-align: end;
             color: $primary-color;
             font-size: 12px;
+            width: 70px;
+            margin-right: 8px;
+            line-height: 17.11px;
+            font-weight: 500;
+      }
+      &__img {
+            border-radius: 50px;
+            object-fit: cover;
+            width: 32px;
+            height: 32px;
       }
 }
