@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './dropDown.scss'
 import UpArrow from '../../../assets/upArrow.svg'
 
-const DropDown = ({ title, paragraph }) => {
+const DropDown = ({ title, paragraph, isList }) => {
       const [isOpen, setIsOpen] = useState(false)
       const handleToggle = () => {
             setIsOpen(!isOpen)
@@ -23,7 +23,20 @@ const DropDown = ({ title, paragraph }) => {
                               isOpen ? 'animate' : ''
                         }`}
                   >
-                        {paragraph}
+                        {isList ? (
+                              <ul className="dropDown__listContainer">
+                                    {paragraph.map((element, index) => (
+                                          <li
+                                                className="dropDown__list"
+                                                key={index}
+                                          >
+                                                {element}
+                                          </li>
+                                    ))}
+                              </ul>
+                        ) : (
+                              paragraph
+                        )}
                   </div>
             </div>
       )

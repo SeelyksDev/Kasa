@@ -1,11 +1,10 @@
 import './host.scss'
-import HostPicture from '../../../assets/homme.jpg'
 
-const Host = () => {
+const Host = ({ name, picture }) => {
       return (
             <section className="host">
-                  <span className="host__name">Alexandre Dumas</span>
-                  <img className="host__img" src={HostPicture} alt="" />
+                  <span className="host__name">{name}</span>
+                  <img className="host__img" src={picture} alt="hôte" />
             </section>
       )
 }

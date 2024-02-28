@@ -9,14 +9,11 @@ const MainHome = () => {
             <main className="main">
                   <HeroBanner />
                   <section className="cardContainer">
-                        {RentalList.map((location) => (
-                              <Link
-                                    to={`/rental/${location.id}`}
-                                    key={location.id}
-                              >
+                        {RentalList.map((rental) => (
+                              <Link to={`/rental/${rental.id}`} key={rental.id}>
                                     <Card
-                                          cover={location.cover}
-                                          title={location.title}
+                                          cover={rental.cover}
+                                          title={rental.title}
                                     />
                               </Link>
                         ))}
