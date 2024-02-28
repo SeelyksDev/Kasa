@@ -3,30 +3,28 @@ import './dropDown.scss'
 import UpArrow from '../../../assets/upArrow.svg'
 
 const DropDown = ({ title, paragraph }) => {
-      const [isOpen, setIsOpen] = useState(true)
+      const [isOpen, setIsOpen] = useState(false)
+      const handleToggle = () => {
+            setIsOpen(!isOpen)
+      }
 
-      return isOpen ? (
-            <div className="dropDown">
-                  <button
-                        className="dropDown__button"
-                        onClick={() => setIsOpen(true)}
-                  >
-                        <span className="dropDown__title">{title}</span>
-                        <img className="dropDown__arrow" src={UpArrow} alt="" />
-                  </button>
-                  <div className="dropDown__textContainer">
-                        <p className="dropDown__text">{paragraph}</p>
+      return (
+            <div className={`dropDown ${isOpen ? 'open' : ''}`}>
+                  <div className="dropDown__head" onClick={handleToggle}>
+                        <h3 className="dropDown__title">{title}</h3>
+                        <img
+                              src={UpArrow}
+                              alt="flèche"
+                              className={`arrow ${isOpen ? 'down' : ''}`}
+                        />
                   </div>
-            </div>
-      ) : (
-            <div className="dropDown">
-                  <button
-                        className="dropDown__button"
-                        onClick={() => setIsOpen(false)}
+                  <div
+                        className={`dropDown__textContainer ${
+                              isOpen ? 'animate' : ''
+                        }`}
                   >
-                        <span className="dropDown__title">{title}</span>
-                        <img className="dropDown__arrow" src={UpArrow} alt="" />
-                  </button>
+                        {paragraph}
+                  </div>
             </div>
       )
 }

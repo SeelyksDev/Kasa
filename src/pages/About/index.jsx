@@ -1,13 +1,12 @@
 import Header from '../layout/Header/index'
+import MainAbout from '../layout/MainAbout/index'
 import Footer from '../layout/Footer/index'
 
 const About = () => {
       return (
             <div>
                   <Header />
-                  <p>
-                        <strong>Ceci sera la page "A propos"</strong>
-                  </p>
+                  <MainAbout />
                   <Footer />
             </div>
       )
