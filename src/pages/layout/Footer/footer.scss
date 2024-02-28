@@ -1,25 +1,24 @@
 .footer {
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 209px;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 209px;
+      &__items {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+      }
 
-    &__items {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
+      &__logo {
+            width: 122px;
+            height: 39.44px;
+      }
 
-    &__logo {
-        width: 122px;
-        height: 39.44px;
-    }
-
-    &__copyright {
-        color: white;
-        font-size: 12px;
-        width: 88.59px;
-        line-height: 17.11px;
-    }
+      &__copyright {
+            color: white;
+            font-size: 12px;
+            width: 88.59px;
+            line-height: 17.11px;
+      }
 }
