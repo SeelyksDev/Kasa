@@ -4,7 +4,7 @@ import Footer from '../layout/Footer/index'
 
 const Home = () => {
       return (
-            <section>
+            <section className="home">
                   <Header />
                   <MainHome />
                   <Footer />

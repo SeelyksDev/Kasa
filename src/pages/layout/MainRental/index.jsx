@@ -11,10 +11,10 @@ import './mainRental.scss'
 const MainRental = () => {
       const { id } = useParams()
       const currentRental = RentalList.find((rental) => rental.id === id)
-      const tags = currentRental.tags || []
+      const tags = currentRental.tags
       return (
             <main className="main-rental">
-                  <Carousel image={RentalList.cover} title={RentalList.title} />
+                  <Carousel image={currentRental.pictures} />
                   <TitleRental
                         title={currentRental.title}
                         location={currentRental.location}
@@ -25,7 +25,7 @@ const MainRental = () => {
                         ))}
                   </div>
                   <div className="main-rental__ratingHost">
-                        <Rating />
+                        <Rating rating={parseInt(currentRental.rating, 10)} />
                         <Host
                               name={currentRental.host.name}
                               picture={currentRental.host.picture}
