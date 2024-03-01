@@ -1,5 +1,19 @@
 @import './variables.scss';
+
+/*html {
+      @media screen and (min-width: 1024px) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+      }
+}
+*/
+
 body {
+      /*@media screen and (min-width: 1024px) {
+            max-width: 1440px;
+      }*/
+
       margin: 0;
       font-family: $primary-font, sans-serif;
       -webkit-font-smoothing: antialiased;

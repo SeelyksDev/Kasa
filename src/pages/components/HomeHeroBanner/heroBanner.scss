@@ -6,7 +6,11 @@
             url('../../../assets/heroBanner.svg');
       background-size: cover;
       background-position: center center;
-      border-radius: 12px;
+      border-radius: 20px;
+
+      @media screen and (min-width: 1024px) {
+            height: 223px;
+      }
 
       &__img {
             object-fit: cover;
@@ -26,5 +30,11 @@
             z-index: 2;
             font-size: clamp(24px, 4vw, 48px);
             font-weight: bold;
+
+            @media screen and (min-width: 1024px) {
+                  width: 70%;
+                  left: 150px;
+                  top: 50px;
+            }
       }
 }

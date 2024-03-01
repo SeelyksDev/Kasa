@@ -1,7 +1,20 @@
 .main {
       margin: 20px;
+      @media screen and (min-width: 1024px) {
+            margin: 30px 50px 45px 50px;
+      }
 }
 
 .cardContainer {
-      width: 100%;
+      max-width: 100%;
+      @media screen and (min-width: 1024px) {
+            margin-top: 40px;
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            background-color: #f6f6f6;
+            border-radius: 20px;
+            row-gap: 40px;
+            column-gap: 40px;
+      }
 }

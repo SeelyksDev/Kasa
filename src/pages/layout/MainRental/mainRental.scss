@@ -1,9 +1,25 @@
 .main-rental {
       margin: 0 20px 0 20px;
+      @media screen and (min-width: 1024px) {
+            margin: 30px 50px 45px 50px;
+      }
       &__ratingHost {
             margin: 15px 0 16px 0;
             display: flex;
             justify-content: space-between;
+            align-items: center;
+
+            @media screen and (min-width: 1024px) {
+                  display: flex;
+                  flex-direction: column-reverse;
+                  width: 30%;
+            }
+      }
+}
+
+.allDropDowns {
+      @media screen and (min-width: 1024px) {
+            display: flex;
             align-items: center;
       }
 }

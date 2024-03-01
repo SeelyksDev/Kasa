@@ -31,15 +31,17 @@ const MainRental = () => {
                               picture={currentRental.host.picture}
                         />
                   </div>
-                  <DropDown
-                        title="Description"
-                        paragraph={currentRental.description}
-                  />
-                  <DropDown
-                        title="Équipements"
-                        paragraph={currentRental.equipments}
-                        isList={true}
-                  />
+                  <section className="allDropDowns">
+                        <DropDown
+                              title="Description"
+                              paragraph={currentRental.description}
+                        />
+                        <DropDown
+                              title="Équipements"
+                              paragraph={currentRental.equipments}
+                              isList={true}
+                        />
+                  </section>
             </main>
       )
 }
