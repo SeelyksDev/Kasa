@@ -1,16 +1,22 @@
-import Header from '../layout/Header/index'
-import MainAbout from '../layout/MainAbout/index'
-import Footer from '../layout/Footer/index'
-import './about.scss'
+import { useEffect } from "react";
+import Header from "../layout/Header/index";
+import MainAbout from "../layout/MainAbout/index";
+import Footer from "../layout/Footer/index";
+import "./about.scss";
 
 const About = () => {
-      return (
-            <section className="about">
-                  <Header />
-                  <MainAbout />
-                  <Footer />
-            </section>
-      )
-}
+    useEffect(() => {
+        document.title = "Kasa - A Propos";
 
-export default About
+        return () => {};
+    }, []);
+    return (
+        <section className="about">
+            <Header />
+            <MainAbout />
+            <Footer />
+        </section>
+    );
+};
+
+export default About;

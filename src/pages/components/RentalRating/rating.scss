@@ -1,13 +1,9 @@
-.redstar {
+.redstar,.greystar {
+      width: 18px;
+      height: 18px;
       @media screen and (min-width: 1024px) {
             width: 36px;
             height: 36px;
       }
 }
 
-.greystar {
-      @media screen and (min-width: 1024px) {
-            width: 36px;
-            height: 36px;
-      }
-}

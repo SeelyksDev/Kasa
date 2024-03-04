@@ -1,9 +1,14 @@
 .aboutBanner {
-      height: 111px;
-      margin-bottom: 25px;
-      border-radius: 10px;
-      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-            url('../../../assets/valley.svg');
-      background-size: cover;
-      background-position: center center;
+    height: 111px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url("../../../assets/valley.svg");
+    background-size: cover;
+    background-position: center center;
+
+    @media screen and (min-width: 1024px) {
+        height: 223px;
+        margin: 0 50px 30px 50px;
+    }
 }
