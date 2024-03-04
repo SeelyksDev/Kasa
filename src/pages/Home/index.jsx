@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import Header from "../layout/Header/index.jsx";
-import MainHome from "../layout/MainHome/index";
-import Footer from "../layout/Footer/index";
+import Header from "../../layout/Header/index.jsx";
+import MainHome from "../../layout/MainHome/index";
+import Footer from "../../layout/Footer/index";
 
 const Home = () => {
     useEffect(() => {

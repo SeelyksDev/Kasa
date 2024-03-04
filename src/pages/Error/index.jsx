@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import Header from "../layout/Header/index";
-import Footer from "../layout/Footer/index";
-import MainError from "../layout/MainError";
+import Header from "../../layout/Header/index";
+import Footer from "../../layout/Footer/index";
+import MainError from "../../layout/MainError";
 
 const Error = () => {
     useEffect(() => {

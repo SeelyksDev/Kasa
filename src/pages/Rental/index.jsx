@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import Header from "../layout/Header/index.jsx";
-import MainRental from "../layout/MainRental/index.jsx";
-import Footer from "../layout/Footer/index.jsx";
+import Header from "../../layout/Header/index.jsx";
+import MainRental from "../../layout/MainRental/index.jsx";
+import Footer from "../../layout/Footer/index.jsx";
 
 const Rental = () => {
     useEffect(() => {
