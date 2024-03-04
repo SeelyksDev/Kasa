@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import Header from "../layout/Header/index";
 import MainAbout from "../layout/MainAbout/index";
 import Footer from "../layout/Footer/index";
-import "./about.scss";
 
 const About = () => {
     useEffect(() => {

@@ -33,6 +33,12 @@
         overflow: hidden;
         z-index: 1;
         height: 33px;
+
+        @media screen and (min-width: 768px) {
+            height: 40px;
+            border-radius: 7px;
+            flex: 1;
+        }
         @media screen and (min-width: 1024px) {
             height: 47px;
             border-radius: 9px;
@@ -44,6 +50,10 @@
         font-size: 13px;
         font-weight: 700;
         margin-left: 10px;
+
+        @media screen and (min-width: 768px) {
+            font-size: 15px;
+        }
         @media screen and (min-width: 1024px) {
             font-size: 18px;
         }
@@ -66,6 +76,10 @@
     &.down {
         transform: rotate(-180deg);
     }
+    @media screen and (min-width: 768px) {
+        width: 19px;
+        height: 14px;
+    }
     @media screen and (min-width: 1024px) {
         width: 24px;
         height: 13.71px;
@@ -82,6 +96,10 @@
     height: 0;
     transition: all 0.5s ease-in-out;
     padding: 10px;
+
+    @media screen and (min-width: 768px) {
+        font-size: 12px;
+    }
 
     @media screen and (min-width: 1024px) {
         display: none;

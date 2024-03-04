@@ -1,20 +1,9 @@
 @import "./variables.scss";
 
-/*html {
-      @media screen and (min-width: 1024px) {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-      }
-}
-*/
-
 body {
-    /*@media screen and (min-width: 1024px) {
-            max-width: 1440px;
-      }*/
+    max-width: 1440px;
+    margin: 0 auto;
 
-    margin: 0;
     font-family: $primary-font, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -23,8 +12,4 @@ body {
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
         monospace;
-}
-
-main {
-    //min-height: calc(100vh - 211px - 58px);
 }

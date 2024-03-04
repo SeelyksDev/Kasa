@@ -22,6 +22,10 @@
         font-size: 12px;
         width: 110.59px;
         line-height: 17.11px;
+        @media screen and (min-width: 768px) {
+            font-size: 18px;
+            width: 100%;
+        }
         @media screen and (min-width: 1024px) {
             width: 100%;
             font-size: 20px;

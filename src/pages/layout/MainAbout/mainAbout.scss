@@ -4,10 +4,18 @@
         display: grid;
         row-gap: 20px;
         margin-bottom: 20px;
+
+        @media screen and (min-width: 768px) {
+            margin: 0 50px 20px 50px;
+        }
         @media screen and (min-width: 1024px) {
             display: flex;
             align-items: center;
             flex-direction: column;
+            margin-bottom: 30px;
         }
+    }
+    @media screen and (min-width: 768px) {
+        margin: 0 40px 0 40px;
     }
 }
