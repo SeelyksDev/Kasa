@@ -29,8 +29,7 @@
         font-weight: 500;
         text-transform: uppercase;
 
-        &:hover,
-        :active {
+        &:active {
             text-decoration: underline;
         }
         @media screen and (max-width: 356px) {

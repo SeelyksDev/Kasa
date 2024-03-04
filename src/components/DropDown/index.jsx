@@ -9,7 +9,7 @@ const DropDown = ({ title, paragraph, isList }) => {
     };
 
     return (
-        <div className={`dropDown ${isOpen ? "open" : ""}`}>
+        <div className="dropDown">
             <div className="dropDown__head" onClick={handleToggle}>
                 <h3 className="dropDown__title">{title}</h3>
                 <img

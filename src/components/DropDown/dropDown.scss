@@ -9,11 +9,11 @@
 }
 
 @keyframes dropUpAnim {
-    0% {
+    from {
         transform: translateY(0px);
     }
-    100% {
-        transform: translateY(-90px);
+    to {
+        transform: translateY(-60px);
     }
 }
 .dropDown {
@@ -23,6 +23,7 @@
     overflow: hidden;
     max-width: 1240px;
     cursor: pointer;
+
     &__head {
         position: relative;
         display: flex;
@@ -117,9 +118,5 @@
             display: block;
             overflow: hidden;
         }
-    }
-
-    &.closed {
-        animation: dropUpAnim 0.5s ease-in-out;
     }
 }
