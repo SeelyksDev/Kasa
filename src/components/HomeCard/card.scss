@@ -1,27 +1,33 @@
 .card {
     position: relative;
-    background-color: black;
     border-radius: 13px;
     height: 255px;
     width: 100%;
     margin-top: 27px;
-    @media screen and (min-width: 768px) {
-        margin-top: 0;
-    }
-    @media screen and (min-width: 1024px) {
-        margin-top: 0;
+    &::before {
+        content: "";
+        position: absolute;
+        border-radius: 12px;
+        width: 100%;
+        height: 255px;
+        z-index: 2;
+        background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.7707457983193278) 0%,
+            rgba(252, 252, 252, 0) 47%
+        );
+        opacity: 0.85;
     }
     &__img {
         width: 100%;
         height: 255px;
         object-fit: cover;
         border-radius: 10px;
-        opacity: 85%;
     }
     &__title {
         color: white;
         position: absolute;
-        z-index: 2;
+        z-index: 3;
         font-size: 18px;
         top: 180px;
         left: 19.71px;
@@ -34,5 +40,11 @@
         @media screen and (min-width: 1024px) {
             padding: 0 20px 20px 0;
         }
+    }
+    @media screen and (min-width: 768px) {
+        margin-top: 0;
+    }
+    @media screen and (min-width: 1024px) {
+        margin-top: 0;
     }
 }

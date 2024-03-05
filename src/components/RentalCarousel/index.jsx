@@ -28,13 +28,13 @@ const Carousel = ({ image }) => {
                 <div>
                     <img
                         onClick={() => leftClick()}
-                        className="carousel__arrowleft"
+                        className="carousel__arrow carousel__arrow--left"
                         src={LeftArrow}
                         alt="left-arrow"
                     />
                     <img
                         onClick={() => rightClick()}
-                        className="carousel__arrowright"
+                        className="carousel__arrow carousel__arrow--right"
                         src={RightArrow}
                         alt="right-arrow"
                     />

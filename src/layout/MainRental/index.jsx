@@ -1,4 +1,5 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import Carousel from "../../components/RentalCarousel";
 import RentalList from "../../datas/rentalList.json";
 import TitleRental from "../../components/RentalTitle/index";
@@ -10,7 +11,19 @@ import "./mainRental.scss";
 
 const MainRental = () => {
     const { id } = useParams();
+    const navigate = useNavigate();
     const currentRental = RentalList.find((rental) => rental.id === id);
+
+    useEffect(() => {
+        if (currentRental === undefined) {
+            navigate("*");
+        }
+    }, [currentRental, navigate]);
+
+    if (currentRental === undefined) {
+        return null;
+    }
+
     const tags = currentRental.tags;
     return (
         <main className="main-rental">

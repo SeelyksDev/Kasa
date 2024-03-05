@@ -15,32 +15,24 @@
             height: 415px;
         }
     }
-    &__arrowleft {
+    &__arrow {
         position: absolute;
-        left: 0px;
-        top: 127.5px;
+        top: 50%;
+        transform: translate(0%, -50%);
         width: 24px;
         @media screen and (min-width: 768px) {
-            width: 35px;
-            top: 150px;
-        }
-        @media screen and (min-width: 1024px) {
-            width: 46.68px;
-            top: 207px;
-        }
-    }
-    &__arrowright {
-        position: absolute;
-        right: 0px;
-        top: 127.5px;
-        width: 24px;
-        @media screen and (min-width: 768px) {
-            top: 150px;
             width: 35px;
         }
         @media screen and (min-width: 1024px) {
             width: 46.68px;
-            top: 207px;
+        }
+
+        &--left {
+            left: 0;
+        }
+
+        &--right {
+            right: 0;
         }
     }
     @media screen and (min-width: 768px) {
