@@ -3,38 +3,32 @@ import greyStar from "../../assets/greyStar.svg";
 import "./rating.scss";
 
 const Rating = ({ rating }) => {
-    let redStarArray = [];
-    let greyStarArray = [];
+    let ratingStarArray = [];
     const allStars = 5;
 
-    for (let i = 0; i < rating; i++) {
-        redStarArray.push(
-            <img
-                className="redstar"
-                key={i}
-                src={redStar}
-                alt="etoile positive"
-            />
-        );
+    for (let i = 0; i < allStars; i++) {
+        if (i <= rating - 1) {
+            ratingStarArray.push(
+                <img
+                    className="redstar"
+                    key={i}
+                    src={redStar}
+                    alt="etoile positive"
+                />
+            );
+        } else {
+            ratingStarArray.push(
+                <img
+                    className="greystar"
+                    key={i}
+                    src={greyStar}
+                    alt="etoile negative"
+                />
+            );
+        }
     }
 
-    for (let i = 0; i < allStars - rating; i++) {
-        greyStarArray.push(
-            <img
-                className="greystar"
-                key={i}
-                src={greyStar}
-                alt="etoile negative"
-            />
-        );
-    }
-
-    return (
-        <div>
-            {redStarArray}
-            {greyStarArray}
-        </div>
-    );
+    return <div>{ratingStarArray}</div>;
 };
 
 export default Rating;

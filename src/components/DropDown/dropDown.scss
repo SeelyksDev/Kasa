@@ -9,13 +9,17 @@
 }
 
 @keyframes dropUpAnim {
-    from {
+    0% {
+        display: block;
         transform: translateY(0px);
     }
-    to {
+    75% {
         transform: translateY(-60px);
     }
+    100% {
+    }
 }
+
 .dropDown {
     width: 100%;
     height: min-content;
@@ -118,5 +122,10 @@
             display: block;
             overflow: hidden;
         }
+    }
+    &.closed {
+        opacity: 0;
+        height: max-content;
+        animation: dropUpAnim 0.5s ease-in-out;
     }
 }
