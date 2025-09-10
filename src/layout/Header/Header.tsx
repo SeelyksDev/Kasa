@@ -1,18 +1,41 @@
-import { Link } from "react-router";
+import logo from "../../assets/logo-mobile.svg";
+import { NavLink } from "react-router";
+import "./_Header.scss";
 
 function Header() {
     return (
-        <>
-            <img src="" alt="" />
-            <ul>
-                <li>
-                    <Link to="/">Accueil</Link>
-                </li>
-                <li>
-                    <Link to="/about">A Propos</Link>
-                </li>
-            </ul>
-        </>
+        <header className="header">
+            <nav className="navigation">
+                <NavLink
+                    to="/"
+                    className="logo-link"
+                >
+                    <img src={logo} alt="logo Kasa" className="logo" />
+                </NavLink>
+                <ul className="nav-links">
+                    <li className="link">
+                        <NavLink
+                            to="/"
+                            className={({ isActive }) =>
+                                isActive ? "active" : ""
+                            }
+                        >
+                            Accueil
+                        </NavLink>
+                    </li>
+                    <li className="link">
+                        <NavLink
+                            to="/a-propos"
+                            className={({ isActive }) =>
+                                isActive ? "active" : ""
+                            }
+                        >
+                            A Propos
+                        </NavLink>
+                    </li>
+                </ul>
+            </nav>
+        </header>
     );
 }
 

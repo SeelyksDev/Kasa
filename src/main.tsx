@@ -7,7 +7,7 @@ import Rental from "./pages/Rental/Rental";
 import Error404 from "./pages/404/404";
 import Header from "./layout/Header/Header";
 import Footer from "./layout/Footer/Footer";
-import "./index.css";
+import "./index.scss";
 
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
@@ -15,8 +15,8 @@ createRoot(document.getElementById("root")!).render(
             <Header />
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/rental" element={<Rental />} />
+                <Route path="/a-propos" element={<About />} />
+                <Route path="/location" element={<Rental />} />
                 <Route path="*" element={<Error404 />} />
             </Routes>
             <Footer />
