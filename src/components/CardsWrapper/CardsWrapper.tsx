@@ -4,25 +4,26 @@ import "./CardsWrapper.scss";
 import RentalCard from "../RentalCard/RentalCard.tsx";
 
 function CardsWrapper() {
+    const [cards, setCards] = useState([]);
 
-const [cards, setCards] = useState([]);
-
-useEffect( () => {
- const fetchRentals = async () => {
-    const data = await getRentals();
-    console.log(data);
-    setCards(data);
- }
- fetchRentals();
-}, []);
+    useEffect(() => {
+        const fetchRentals = async () => {
+            const data = await getRentals();
+            console.log(data);
+            setCards(data);
+        };
+        fetchRentals();
+    }, []);
 
     return (
-    <ul className="cardsWrapper">
-        {cards.map((card, index) => (
-            <RentalCard key={index} data={card} />
-        ))}
-    </ul>
-);
+        <section className="rental-overview">
+            <ul className="cardsWrapper">
+                {cards.map((card, index) => (
+                    <RentalCard key={index} data={card} />
+                ))}
+            </ul>
+        </section>
+    );
 }
 
 export default CardsWrapper;

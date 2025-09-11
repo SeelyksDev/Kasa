@@ -9,16 +9,38 @@
 }
 
 #root {
-    padding: 20px;
+    min-width: 351px;
+    padding: 0;
+}
+
+header,
+main {
     max-width: 1440px;
     min-width: 351px;
+}
+
+header {
+    padding: 20px 20px 0 20px;
 
     @media screen and (min-width: 768px) {
-      padding: 32px 60px;
+        padding: 32px 60px 0 60px;
     }
 
     @media screen and (min-width: 1040px) {
-        padding: 45px 100px;
+        padding: 45px 100px 0 100px;
+    }
+}
+
+main {
+    padding: 0 20px 27px 20px;
+    margin: 0 auto;
+
+    @media screen and (min-width: 768px) {
+        padding: 0 60px 38px 60px;
+    }
+
+    @media screen and (min-width: 1040px) {
+        padding: 0 100px 50px 100px;
     }
 }
 
@@ -37,12 +59,21 @@ a:visited {
     color: inherit;
 }
 
+p {
+    margin: 0;
+}
+
 body {
     margin: 0;
     min-height: 100vh;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
 }
 

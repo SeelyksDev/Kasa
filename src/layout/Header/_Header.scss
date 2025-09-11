@@ -1,5 +1,5 @@
 .header {
-    margin-bottom: 27px;
+    margin: 0 auto 27px auto;
 
     @media screen and (min-width: 1040px) {
         margin-bottom: 50px;
@@ -26,8 +26,8 @@
                 }
 
                 @media screen and (min-width: 1040px) {
-                    max-width: 210px;
-                    max-height: 68px;
+                    min-width: 210px;
+                    min-height: 68px;
                 }
             }
         }

@@ -16,7 +16,7 @@ createRoot(document.getElementById("root")!).render(
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/a-propos" element={<About />} />
-                <Route path="/location" element={<Rental />} />
+                <Route path="/location/:id" element={<Rental />} />
                 <Route path="*" element={<Error404 />} />
             </Routes>
             <Footer />

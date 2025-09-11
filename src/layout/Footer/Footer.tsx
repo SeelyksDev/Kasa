@@ -1,10 +1,13 @@
+import LogoFooter from "../../assets/svg/logo-footer.svg";
+import "./Footer.css";
+
 function Footer() {
     const year = new Date().getFullYear();
 
     return (
-        <footer>
-            <img src="" alt="" />
-            <p>© {year} Kasa. All rights reserved</p>
+        <footer className="footer">
+            <img src={LogoFooter} alt="Logo Kasa" className="logo" />
+            <p className="copyright">© {year} Kasa. All rights reserved</p>
         </footer>
     );
 }
