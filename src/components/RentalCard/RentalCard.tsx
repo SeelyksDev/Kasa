@@ -1,10 +1,22 @@
+import { NavLink } from "react-router";
 import "./RentalCard.scss";
 
-function RentalCard() {
+interface RentalCardProps {
+    data: {
+        id: string;
+        title: string;
+        cover: string;
+    };
+}
+
+function RentalCard({ data }: RentalCardProps) {
     return (
-        <a href="" className="card">
-            <h2 className="card-title">Titre de la location</h2>
-        </a>
+        <li className="card">
+            <NavLink to="" className="card-content" title={data.title}>
+                <img src={data.cover} alt={data.title} className="card-img" />
+                <h2 className="card-title">{data.title}</h2>
+            </NavLink>
+        </li>
     );
 }
 
