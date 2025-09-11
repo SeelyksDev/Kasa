@@ -1,10 +1,11 @@
+import HeroBanner from '../../components/HeroBanner/HeroBanner'
 import './Home.css'
 
 function Home() {
 
   return (
     <>
-      <h1 style={{color: 'black'}}>HOME</h1>
+      <HeroBanner />
     </>
   )
 }

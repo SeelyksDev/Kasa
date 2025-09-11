@@ -1,5 +1,9 @@
 .header {
-    margin-bottom: 50px;
+    margin-bottom: 27px;
+
+    @media screen and (min-width: 1040px) {
+        margin-bottom: 50px;
+    }
 
     .navigation {
         display: flex;
@@ -16,6 +20,11 @@
                 max-height: 47px;
                 padding: 0;
 
+                @media screen and (min-width: 768px) {
+                    max-width: 177px;
+                    max-height: 57px;
+                }
+
                 @media screen and (min-width: 1040px) {
                     max-width: 210px;
                     max-height: 68px;
@@ -28,6 +37,10 @@
             align-items: center;
             gap: 26px;
 
+            @media screen and (min-width: 768px) {
+                gap: 41px;
+            }
+
             @media screen and (min-width: 1040px) {
                 gap: 57px;
             }
@@ -36,6 +49,10 @@
                 font-weight: 500;
                 font-size: 0.75rem;
                 text-transform: uppercase;
+
+                @media screen and (min-width: 768px) {
+                    font-size: 1.125rem;
+                }
 
                 @media screen and (min-width: 1040px) {
                     text-transform: capitalize;
