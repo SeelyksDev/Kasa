@@ -1,5 +1,4 @@
 :root {
-    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.87);
@@ -43,7 +42,7 @@ body {
     min-height: 100vh;
 }
 
-h1 {
+h1,h2,h3,h4,h5,h6 {
     margin: 0;
 }
 

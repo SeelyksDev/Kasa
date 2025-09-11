@@ -1,4 +1,4 @@
-import "./_HeroBanner.scss";
+import "./HeroBanner.scss";
 
 function HeroBanner() {
     return (

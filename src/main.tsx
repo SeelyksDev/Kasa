@@ -7,7 +7,7 @@ import Rental from "./pages/Rental/Rental";
 import Error404 from "./pages/404/404";
 import Header from "./layout/Header/Header";
 import Footer from "./layout/Footer/Footer";
-import "./index.scss";
+import "./styles/index.scss";
 
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
