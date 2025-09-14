@@ -1,8 +1,13 @@
+import { NavLink } from "react-router";
+import "./404.css";
+
 function Error404() {
     return (
-        <>
-            <h1>404</h1>
-        </>
+        <main className="404-wrapper">
+            <h1 className="404-title">404</h1>
+            <h2 className="404-subtitle">Oups! La page que vous demandez n'existe pas.</h2>
+            <NavLink to="/" className="404-link">Retourner sur la page d’accueil</NavLink>
+        </main>
     );
 }
 
