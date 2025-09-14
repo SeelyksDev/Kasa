@@ -7,12 +7,11 @@ function CardsWrapper() {
     const [cards, setCards] = useState([]);
 
     useEffect(() => {
-        const fetchRentals = async () => {
+        (async () => {
             const data = await getRentals();
             console.log(data);
             setCards(data);
-        };
-        fetchRentals();
+        })();
     }, []);
 
     return (

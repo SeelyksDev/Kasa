@@ -1,8 +1,12 @@
+import HeroBanner from "../../components/HeroBanner/HeroBanner";
+
 function About() {
     return (
-        <>
-            <h1>About</h1>
-        </>
+        <main>
+            <HeroBanner>
+                <section className="heroBanner bannerAbout"></section>
+            </HeroBanner>
+        </main>
     );
 }
 

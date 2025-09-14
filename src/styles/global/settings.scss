@@ -19,18 +19,6 @@ main {
     min-width: 351px;
 }
 
-header {
-    padding: 20px 20px 0 20px;
-
-    @media screen and (min-width: 768px) {
-        padding: 32px 60px 0 60px;
-    }
-
-    @media screen and (min-width: 1040px) {
-        padding: 45px 100px 0 100px;
-    }
-}
-
 main {
     padding: 0 20px 27px 20px;
     margin: 0 auto;

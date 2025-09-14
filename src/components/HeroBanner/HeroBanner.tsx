@@ -1,11 +1,7 @@
 import "./HeroBanner.scss";
 
-function HeroBanner() {
-    return (
-        <section className="heroBanner">
-            <h1 className="title">Chez vous, partout et ailleurs</h1>
-        </section>
-    );
+function HeroBanner({ children }: React.PropsWithChildren) {
+    return children;
 }
 
 export default HeroBanner;
