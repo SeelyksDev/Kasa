@@ -1,24 +1,20 @@
 import HeroBanner from "../../components/HeroBanner/HeroBanner";
-import { getDropdownsAbout } from "../../utils/aboutDropdownApi";
-import { useState, useEffect } from "react";
+import { aboutData } from "../../data/about-data";
+import Dropdown from "../../components/Dropdown/Dropdown";
 
 function About() {
-
-    const [dropdowns, setDropdowns] = useState([]);
-
-        useEffect(() => {
-        (async () => {
-            const data = await getDropdownsAbout();
-            console.log(data);
-            setDropdowns(data);
-        })();
-    }, []);
 
     return (
         <main>
             <HeroBanner>
                 <section className="heroBanner bannerAbout"></section>
             </HeroBanner>
+            <ul className="dropowns-wrapper">
+                <Dropdown title={aboutData[0].title} text={aboutData[0].texte} />
+                <Dropdown title={aboutData[1].title} text={aboutData[1].texte} />
+                <Dropdown title={aboutData[2].title} text={aboutData[2].texte} />
+                <Dropdown title={aboutData[3].title} text={aboutData[3].texte} />
+            </ul>
         </main>
     );
 }

@@ -1,22 +1,23 @@
 import "./Dropdown.scss";
 
-interface DropdownData {
-  id: string;
-  title: string;
-  content: string;
-}
-
-interface DropdownProps {
-  dropdown: DropdownData;
-}
-
-function Dropdown ({ dropdown }: DropdownProps) {
+function Dropdown({ typeContent, title, text, equipementArray }) {
     return (
-        <li>
-            <p className="title">{dropdown.title}</p>
-            <p className="content">{dropdown.content}</p>
+        <li className="dropdown-item">
+            <details>
+                <summary>{title}</summary>
+                {typeContent === "equipement" ? (
+                    <ul>
+                        {equipementArray.map((el, index) => (
+                            <li key={index}>{el.equipement}</li>
+                        ))}
+                        ;
+                    </ul>
+                ) : (
+                    <p>{text}</p>
+                )}
+            </details>
         </li>
-    )
+    );
 }
 
 export default Dropdown;
