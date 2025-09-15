@@ -1,6 +1,6 @@
 import CardsWrapper from "../../components/CardsWrapper/CardsWrapper";
 import HeroBanner from "../../components/HeroBanner/HeroBanner";
-import "./Home.css";
+import "./Home.scss";
 
 function Home() {
     return (

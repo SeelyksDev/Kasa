@@ -1,6 +1,7 @@
 import HeroBanner from "../../components/HeroBanner/HeroBanner";
 import { aboutData } from "../../data/about-data";
 import Dropdown from "../../components/Dropdown/Dropdown";
+import './About.scss';
 
 function About() {
 
@@ -9,7 +10,7 @@ function About() {
             <HeroBanner>
                 <section className="heroBanner bannerAbout"></section>
             </HeroBanner>
-            <ul className="dropowns-wrapper">
+            <ul className="dropdowns-wrapper">
                 <Dropdown title={aboutData[0].title} content={aboutData[0].texte} />
                 <Dropdown title={aboutData[1].title} content={aboutData[1].texte} />
                 <Dropdown title={aboutData[2].title} content={aboutData[2].texte} />
