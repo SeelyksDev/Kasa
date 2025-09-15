@@ -10,10 +10,10 @@ function About() {
                 <section className="heroBanner bannerAbout"></section>
             </HeroBanner>
             <ul className="dropowns-wrapper">
-                <Dropdown title={aboutData[0].title} text={aboutData[0].texte} />
-                <Dropdown title={aboutData[1].title} text={aboutData[1].texte} />
-                <Dropdown title={aboutData[2].title} text={aboutData[2].texte} />
-                <Dropdown title={aboutData[3].title} text={aboutData[3].texte} />
+                <Dropdown title={aboutData[0].title} content={aboutData[0].texte} />
+                <Dropdown title={aboutData[1].title} content={aboutData[1].texte} />
+                <Dropdown title={aboutData[2].title} content={aboutData[2].texte} />
+                <Dropdown title={aboutData[3].title} content={aboutData[3].texte} />
             </ul>
         </main>
     );
