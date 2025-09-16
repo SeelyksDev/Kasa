@@ -1,8 +1,13 @@
+import { useEffect } from "react";
 import CardsWrapper from "../../components/CardsWrapper/CardsWrapper";
 import HeroBanner from "../../components/HeroBanner/HeroBanner";
 import "./Home.scss";
 
 function Home() {
+    useEffect(() => {
+        document.title = "Kasa : Chez vous, partout et ailleurs";
+    }, []);
+
     return (
         <main>
             <HeroBanner>

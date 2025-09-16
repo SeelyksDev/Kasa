@@ -1,9 +1,13 @@
-import HeroBanner from "../../components/HeroBanner/HeroBanner";
+import { useEffect } from "react";
 import { aboutData } from "../../data/about-data";
+import HeroBanner from "../../components/HeroBanner/HeroBanner";
 import Dropdown from "../../components/Dropdown/Dropdown";
-import './About.scss';
+import "./About.scss";
 
 function About() {
+    useEffect(() => {
+        document.title = "À Propos - Kasa";
+    }, []);
 
     return (
         <main>
@@ -11,10 +15,22 @@ function About() {
                 <section className="heroBanner bannerAbout"></section>
             </HeroBanner>
             <ul className="dropdowns-wrapper">
-                <Dropdown title={aboutData[0].title} content={aboutData[0].texte} />
-                <Dropdown title={aboutData[1].title} content={aboutData[1].texte} />
-                <Dropdown title={aboutData[2].title} content={aboutData[2].texte} />
-                <Dropdown title={aboutData[3].title} content={aboutData[3].texte} />
+                <Dropdown
+                    title={aboutData[0].title}
+                    content={aboutData[0].texte}
+                />
+                <Dropdown
+                    title={aboutData[1].title}
+                    content={aboutData[1].texte}
+                />
+                <Dropdown
+                    title={aboutData[2].title}
+                    content={aboutData[2].texte}
+                />
+                <Dropdown
+                    title={aboutData[3].title}
+                    content={aboutData[3].texte}
+                />
             </ul>
         </main>
     );
