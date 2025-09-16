@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Rental from "./pages/Rental/Rental";
-import Error404 from "./pages/404/404";
+import Error404 from "./pages/404/Error";
 import Header from "./layout/Header/Header";
 import Footer from "./layout/Footer/Footer";
 import "./styles/global/settings.scss";

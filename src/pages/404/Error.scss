@@ -1,0 +1,50 @@
+.error-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 113px 0;
+    gap: 113px;
+
+    @media screen and (min-width: 1040px) {
+        padding: 139px 0;
+        gap: 139px;
+    }
+
+    .error-title {
+        color: #ff6060;
+        font-size: 6rem;
+
+        @media screen and (min-width: 1040px) {
+            font-size: 18rem;
+        }
+    }
+
+    .error-subtitle {
+        color: #ff6060;
+        font-weight: 500;
+        font-size: 1.125rem;
+        max-width: 260px;
+        text-align: center;
+        line-height: 142.6%;
+
+        @media screen and (min-width: 768px) {
+            max-width: none;
+        }
+
+         @media screen and (min-width: 1040px) {
+            font-size: 2.25rem;
+            max-width: none;
+        }
+    }
+
+    .error-link {
+        line-height: 142.6%;
+        text-decoration: underline;
+        font-size: 0.875rem;
+
+        @media screen and (min-width: 1040px) {
+            font-size: 1.125rem;
+        }
+    }
+}
