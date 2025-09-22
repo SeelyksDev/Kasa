@@ -1,0 +1,31 @@
+.carousel {
+    position: relative;
+    height: 255px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 15px;
+
+    .prev-btn,
+    .next-btn {
+        position: absolute;
+        top: 50%;
+        background-image: url(../../assets/svg/carousel-arrow.svg);
+        height: 20px;  
+    }
+
+    .prev-btn {
+        left: 6px;
+        transform: translateY(-50%);
+    }
+
+    .carousel-img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .next-btn {
+        right: 6px;
+        transform: translateY(-50%) rotate(180deg);
+    }
+}

@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
-import { getRentals } from "../../utils/rentalApi.ts";
+import { getRentals } from "../../utils/api/rentalApi.ts";
 import "./CardsWrapper.scss";
 import RentalCard from "../RentalCard/RentalCard.tsx";
+import { getCachedRentals } from "../../utils/store/rentalsStore.ts";
 
 function CardsWrapper() {
     const [cards, setCards] = useState([]);
 
     useEffect(() => {
         (async () => {
-            const data = await getRentals();
+            const data = await getCachedRentals(getRentals);
             console.log(data);
             setCards(data);
         })();
