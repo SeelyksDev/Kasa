@@ -1,9 +1,13 @@
 import { useState, useEffect } from "react";
-import Carousel from "../../components/Carousel/Carousel";
 import { getRentals } from "../../utils/api/rentalApi.ts";
 import { getCachedRentals } from "../../utils/store/rentalsStore.ts";
 import { useParams } from "react-router";
 import TitleLocation from "../../components/TitleLocation/TitleLocation.tsx";
+import Carousel from "../../components/Carousel/Carousel";
+import Tag from "../../components/Tag/Tag.tsx";
+import RatingWrapper from "../../components/RatingWrapper/RatingWrapper.tsx";
+import Host from "../../components/Host/Host.tsx";
+import "./Rental.scss";
 
 function Rental() {
     const [rentals, setRentals] = useState([]);
@@ -31,10 +35,21 @@ function Rental() {
     return (
         <main>
             <Carousel pictures={currentRental.pictures} />
-            <TitleLocation
-                title={currentRental.title}
-                location={currentRental.location}
-            />
+            <section className="title-tag">
+                <TitleLocation
+                    title={currentRental.title}
+                    location={currentRental.location}
+                />
+                <ul className="tags-wrapper">
+                    {currentRental.tags.map((current, index) => (
+                        <Tag key={`${index} - Tag`} text={current} />
+                    ))}
+                </ul>
+            </section>
+            <section className="host-rating">
+                <RatingWrapper rating={currentRental.rating} />
+                <Host host={currentRental.host} />
+            </section>
         </main>
     );
 }

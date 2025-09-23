@@ -1,0 +1,14 @@
+.title-tag {
+    .tags-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+.host-rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 16px;
+}

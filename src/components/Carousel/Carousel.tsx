@@ -22,13 +22,25 @@ function Carousel({ pictures }) {
 
     return (
         <section className="carousel">
-            <button className="prev-btn" onClick={prevIndex}></button>
+            {pictures.length !== 1 && (
+                <button className="prev-btn" onClick={prevIndex}></button>
+            )}
             <img
                 src={pictures[currentIndex]}
                 className="carousel-img"
                 alt="photo du logement"
             />
-            <button className="next-btn" onClick={nextIndex}></button>
+            <span className="counter">
+                {currentIndex + 1}/{pictures.length}
+            </span>
+            {pictures.length !== 1 && (
+                <button
+                    className={`next-btn${
+                        pictures.length === 1 ? " disabled" : ""
+                    }`}
+                    onClick={nextIndex}
+                ></button>
+            )}
         </section>
     );
 }
