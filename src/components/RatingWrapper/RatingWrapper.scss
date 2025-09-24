@@ -1,4 +1,8 @@
 .rating-wrapper {
     display: flex;
     gap: 6px;
+
+    @media screen and (min-width: 1040px) {
+        gap: 15px;
+    }
 }

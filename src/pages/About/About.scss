@@ -8,4 +8,31 @@
         max-width: 1023px;
         margin: 0 auto;
     }
+
+    .dropdown-item {
+        details {
+            summary {
+                span {
+                    font-size: 0.813rem;
+
+                    @media screen and (min-width: 768px) {
+                        font-size: 1.125rem;
+                    }
+
+                    @media screen and (min-width: 1040px) {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+
+            p,
+            ul {
+                font-size: 0.75rem;
+
+                @media screen and (min-width: 768px) {
+                    font-size: 1.125rem;
+                }
+            }
+        }
+    }
 }

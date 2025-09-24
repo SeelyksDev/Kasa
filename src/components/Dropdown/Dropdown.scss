@@ -27,18 +27,9 @@
             list-style: none;
 
             span {
-                font-size: 0.813rem;
                 line-height: 142.6%;
                 font-weight: bold;
                 color: white;
-
-                @media screen and (min-width: 768px) {
-                    font-size: 1.125rem;
-                }
-
-                @media screen and (min-width: 1040px) {
-                    font-size: 1.5rem;
-                }
             }
 
             img.arrow-dropdown {
@@ -56,7 +47,6 @@
         p,
         ul {
             margin-top: -3px;
-            font-size: 0.75rem;
             background-color: #f6f6f6;
             padding: 16px 20px 20px 20px;
             border-radius: 0 0 5px 5px;
@@ -64,19 +54,10 @@
 
             @media screen and (min-width: 768px) {
                 padding: 25px 20px 20px 20px;
-                font-size: 1.125rem;
             }
 
             @media screen and (min-width: 1040px) {
                 padding: 16px 20px 20px 20px;
-            }
-        }
-
-        p {
-        }
-
-        ul {
-            li {
             }
         }
 
