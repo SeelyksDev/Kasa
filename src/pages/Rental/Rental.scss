@@ -1,14 +1,47 @@
-.title-tag {
-    .tags-wrapper {
+.rental-infos {
+    @media screen and (min-width: 1040px) {
         display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .title-tag {
+        margin-bottom: 16px;
+
+        @media screen and (min-width: 1040px) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tags-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+    }
+
+    .host-rating {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 13px;
+
+        @media screen and (min-width: 1040px) {
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 21px;
+            margin-bottom: 0;
+        }
     }
 }
 
-.host-rating {
+.rental-dropdowns {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 16px;
+    flex-direction: column;
+    gap: 20px;
+
+    @media screen and (min-width: 1040px) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }

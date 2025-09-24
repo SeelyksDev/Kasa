@@ -12,9 +12,8 @@ function Dropdown({ typeContent, title, content }) {
                 {typeContent === "equipement" ? (
                     <ul>
                         {content.map((el, index) => (
-                            <li key={index}>{el.equipement}</li>
+                            <li key={index}>{el}</li>
                         ))}
-                        ;
                     </ul>
                 ) : (
                     <p>{content}</p>

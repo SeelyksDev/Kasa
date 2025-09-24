@@ -8,6 +8,7 @@ import Tag from "../../components/Tag/Tag.tsx";
 import RatingWrapper from "../../components/RatingWrapper/RatingWrapper.tsx";
 import Host from "../../components/Host/Host.tsx";
 import "./Rental.scss";
+import Dropdown from "../../components/Dropdown/Dropdown.tsx";
 
 function Rental() {
     const [rentals, setRentals] = useState([]);
@@ -35,21 +36,36 @@ function Rental() {
     return (
         <main>
             <Carousel pictures={currentRental.pictures} />
-            <section className="title-tag">
-                <TitleLocation
-                    title={currentRental.title}
-                    location={currentRental.location}
+            <section className="rental-infos">
+                <section className="title-tag">
+                    <TitleLocation
+                        title={currentRental.title}
+                        location={currentRental.location}
+                    />
+                    <ul className="tags-wrapper">
+                        {currentRental.tags.map((current, index) => (
+                            <Tag key={`${index} - Tag`} text={current} />
+                        ))}
+                    </ul>
+                </section>
+                <section className="host-rating">
+                    <RatingWrapper rating={currentRental.rating} />
+                    <Host host={currentRental.host} />
+                </section>
+            </section>
+            <ul className="rental-dropdowns">
+                <Dropdown
+                    typeContent="description"
+                    title="Description"
+                    content={currentRental.description}
                 />
-                <ul className="tags-wrapper">
-                    {currentRental.tags.map((current, index) => (
-                        <Tag key={`${index} - Tag`} text={current} />
-                    ))}
-                </ul>
-            </section>
-            <section className="host-rating">
-                <RatingWrapper rating={currentRental.rating} />
-                <Host host={currentRental.host} />
-            </section>
+
+                <Dropdown
+                    typeContent="equipement"
+                    title="Équipements"
+                    content={currentRental.equipments}
+                />
+            </ul>
         </main>
     );
 }

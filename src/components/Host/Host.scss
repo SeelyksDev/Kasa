@@ -3,9 +3,16 @@
     align-items: center;
     gap: 10px;
 
-    .name {
-        color: #ff6060;
-        font-size: 0.75rem;
+    .name-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+
+        span {
+            color: #ff6060;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
     }
 
     .picture {
