@@ -10,7 +10,6 @@ function CardsWrapper() {
     useEffect(() => {
         (async () => {
             const data = await getCachedRentals(getRentals);
-            console.log(data);
             setCards(data);
         })();
     }, []);

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { getRentals } from "../../utils/api/rentalApi.ts";
 import { getCachedRentals } from "../../utils/store/rentalsStore.ts";
-import { useParams } from "react-router";
+import { useParams, Navigate } from "react-router";
 import TitleLocation from "../../components/TitleLocation/TitleLocation.tsx";
 import Carousel from "../../components/Carousel/Carousel";
 import Tag from "../../components/Tag/Tag.tsx";
@@ -29,8 +29,12 @@ function Rental() {
         }
     }, [currentRental]);
 
+    if (rentals.length > 0 && !currentRental) {
+        return <Navigate to="*" replace />;
+    }
+
     if (!currentRental) {
-        return <p>Chargement en cours...</p>;
+        return <p>Chargement...</p>;
     }
 
     return (
