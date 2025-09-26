@@ -1,3 +1,26 @@
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loader-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .loader {
+        height: 120px;
+        width: 120px;
+        border: 10px solid #ff6060;
+        border-left: 10px  dashed #ff6060;
+        border-bottom: 10px solid transparent;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+}
+
+
 .rental-infos {
     @media screen and (min-width: 1040px) {
         display: flex;

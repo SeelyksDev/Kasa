@@ -26,6 +26,8 @@ function Rental() {
     useEffect(() => {
         if (currentRental) {
             document.title = `${currentRental.title} - Kasa`;
+        } else {
+            document.title = "Chargement...  - Kasa";
         }
     }, [currentRental]);
 
@@ -34,7 +36,11 @@ function Rental() {
     }
 
     if (!currentRental) {
-        return <p>Chargement...</p>;
+        return (
+            <main className="loader-wrapper">
+                <div className="loader"></div>
+            </main>
+        )
     }
 
     return (
