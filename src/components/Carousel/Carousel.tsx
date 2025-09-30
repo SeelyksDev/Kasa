@@ -35,12 +35,7 @@ function Carousel({ pictures }: CarouselProps) {
                 {currentIndex + 1}/{pictures.length}
             </span>
             {pictures.length !== 1 && (
-                <button
-                    className={`next-btn${
-                        pictures.length === 1 ? " disabled" : ""
-                    }`}
-                    onClick={nextIndex}
-                ></button>
+                <button className="next-btn" onClick={nextIndex}></button>
             )}
         </section>
     );

@@ -30,7 +30,7 @@ function Rental() {
         if (currentRental) {
             document.title = `${currentRental.title} - Kasa`;
         } else {
-            document.title = "Chargement...  - Kasa";
+            document.title = "Chargement... - Kasa";
         }
     }, [currentRental]);
 
