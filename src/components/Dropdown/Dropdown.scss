@@ -2,46 +2,54 @@
     overflow: hidden;
     width: 100%;
 
-    &:hover {
+    .dropdown-header {
+        position: relative;
+        background-color: #ff6060;
+        padding: 10px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 2;
         cursor: pointer;
-    }
 
-    details {
-        summary {
-            position: relative;
-            background-color: #ff6060;
-            padding: 10px;
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            z-index: 2;
+        @media screen and (min-width: 768px) {
+            padding: 10px 20px 10px 10px;
+        }
+
+        span {
+            line-height: 142.6%;
+            font-weight: bold;
+            color: white;
+        }
+
+        img.arrow-dropdown {
+            transition: transform 0.3s ease;
+            width: 16px;
+            height: 9px;
 
             @media screen and (min-width: 768px) {
-                padding: 10px 20px 10px 10px;
+                width: 24px;
+                height: 14px;
             }
 
-            &::-webkit-details-marker {
-                display: none;
+            &.open {
+                transform: rotate(180deg);
             }
-            list-style: none;
+        }
+    }
+    .dropdown-content {
+        max-height: 0;
+        opacity: 0;
+        transform: translateY(-40px);
+        transition: max-height 0.3s ease-out, opacity 0.3s ease-out,
+            transform 0.3s ease-out;
+        overflow: hidden;
 
-            span {
-                line-height: 142.6%;
-                font-weight: bold;
-                color: white;
-            }
-
-            img.arrow-dropdown {
-                transition: transform 0.3s ease;
-                width: 16px;
-                height: 9px;
-
-                @media screen and (min-width: 768px) {
-                    width: 24px;
-                    height: 14px;
-                }
-            }
+        &.open {
+            max-height: 4000px;
+            opacity: 1;
+            transform: translateY(0);
         }
 
         p,
@@ -59,10 +67,6 @@
             @media screen and (min-width: 1040px) {
                 padding: 16px 20px 20px 20px;
             }
-        }
-
-        &[open] summary img.arrow-dropdown {
-            transform: rotate(180deg);
         }
     }
 }

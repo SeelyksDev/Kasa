@@ -70,9 +70,12 @@
         justify-content: space-between;
         gap: 76px;
     }
-    details {
-        summary {
+
+    .dropdown-item {
+        .dropdown-header {
             span {
+                font-size: 0.813rem;
+
                 @media screen and (min-width: 768px) {
                     font-size: 0.938rem;
                 }
