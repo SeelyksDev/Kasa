@@ -1,8 +1,10 @@
-let rentalsCache = null;
+import type { RentalItem } from "../types/rental.types";
 
-export async function getCachedRentals(getRentals) {
+let rentalsCache:  Promise<RentalItem[]> | undefined = undefined;
+
+export async function getCachedRentals(getRentals: () => Promise<RentalItem[]>): Promise<RentalItem[]>  {
   if (!rentalsCache) {
-    rentalsCache = await getRentals();
+    rentalsCache = getRentals();
   }
   return rentalsCache;
 }

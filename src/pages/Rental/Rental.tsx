@@ -9,9 +9,10 @@ import RatingWrapper from "../../components/RatingWrapper/RatingWrapper.tsx";
 import Host from "../../components/Host/Host.tsx";
 import "./Rental.scss";
 import Dropdown from "../../components/Dropdown/Dropdown.tsx";
+import type { RentalItem } from "../../utils/types/rental.types.ts";
 
 function Rental() {
-    const [rentals, setRentals] = useState([]);
+    const [rentals, setRentals] = useState<RentalItem[]>([]);
     const { id } = useParams();
 
     useEffect(() => {
@@ -21,7 +22,9 @@ function Rental() {
         })();
     }, []);
 
-    let currentRental = rentals.find((element) => element.id === id);
+    const currentRental: RentalItem | undefined = rentals.find(
+        (element) => element?.id === id
+    );
 
     useEffect(() => {
         if (currentRental) {
@@ -40,7 +43,7 @@ function Rental() {
             <main className="loader-wrapper">
                 <div className="loader"></div>
             </main>
-        )
+        );
     }
 
     return (
@@ -65,13 +68,11 @@ function Rental() {
             </section>
             <ul className="rental-dropdowns">
                 <Dropdown
-                    typeContent="description"
                     title="Description"
                     content={currentRental.description}
                 />
 
                 <Dropdown
-                    typeContent="equipement"
                     title="Équipements"
                     content={currentRental.equipments}
                 />

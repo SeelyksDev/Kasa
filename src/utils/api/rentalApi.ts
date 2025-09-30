@@ -1,5 +1,7 @@
-export async function getRentals() {
-    const url = "/data/rentals.json";
+import type { RentalItem } from "../types/rental.types";
+
+export async function getRentals(): Promise<RentalItem[]> {
+    const url: string = "/data/rentals.json";
 
     try {
         const response = await fetch(url);
@@ -11,5 +13,6 @@ export async function getRentals() {
         return data;
     } catch (error) {
         console.error((error as Error).message);
+        return [];
     }
 }

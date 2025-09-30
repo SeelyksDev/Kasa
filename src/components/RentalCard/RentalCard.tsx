@@ -1,13 +1,6 @@
 import { NavLink } from "react-router";
+import type { RentalCardProps } from "../../utils/types/rentalCard.types";
 import "./RentalCard.scss";
-
-interface RentalCardProps {
-    data: {
-        id: string;
-        title: string;
-        cover: string;
-    };
-}
 
 function RentalCard({ data }: RentalCardProps) {
     return (

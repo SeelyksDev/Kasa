@@ -1,10 +1,11 @@
 import { useState } from "react";
+import type { CarouselProps } from "../../utils/types/carousel.types";
 import "./Carousel.scss";
 
-function Carousel({ pictures }) {
-    const [currentIndex, setCurrentIndex] = useState(0);
+function Carousel({ pictures }: CarouselProps) {
+    const [currentIndex, setCurrentIndex] = useState<number>(0);
 
-    function prevIndex() {
+    function prevIndex(): void {
         if (currentIndex === 0) {
             setCurrentIndex(pictures.length - 1);
         } else {
@@ -12,7 +13,7 @@ function Carousel({ pictures }) {
         }
     }
 
-    function nextIndex() {
+    function nextIndex(): void {
         if (currentIndex === pictures.length - 1) {
             setCurrentIndex(0);
         } else {

@@ -1,4 +1,6 @@
-export const aboutData = [
+import type { AboutDataItem } from "../utils/types/aboutData.types"
+
+export const aboutData:AboutDataItem[] = [
       {
             "title": "Fiabilité",
             "texte": "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes."

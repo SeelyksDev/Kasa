@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { getRentals } from "../../utils/api/rentalApi.ts";
-import "./CardsWrapper.scss";
-import RentalCard from "../RentalCard/RentalCard.tsx";
 import { getCachedRentals } from "../../utils/store/rentalsStore.ts";
+import RentalCard from "../RentalCard/RentalCard.tsx";
+import type { RentalCardProps } from "../../utils/types/rentalCard.types.ts";
+import "./CardsWrapper.scss";
 
 function CardsWrapper() {
-    const [cards, setCards] = useState([]);
+    const [cards, setCards] = useState<RentalCardProps["data"][]>([]);
 
     useEffect(() => {
         (async () => {

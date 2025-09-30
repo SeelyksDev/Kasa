@@ -1,9 +1,10 @@
+import type { HostProps } from "../../utils/types/host.types";
 import "./Host.scss";
 
-function Host({ host }) {
-    const nameParts = host.name.split(" ");
-    const firstName = nameParts[0];
-    const lastName = nameParts[1];
+function Host({ host }: HostProps) {
+    const nameParts: string[] = host.name.split(" ");
+    const firstName:string = nameParts[0];
+    const lastName: string = nameParts[1];
 
     return (
         <figure className="host">

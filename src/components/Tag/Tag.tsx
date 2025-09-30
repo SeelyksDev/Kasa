@@ -1,10 +1,8 @@
-
+import type { TagProps } from "../../utils/types/tag.types";
 import "./Tag.scss";
 
-function Tag ({ text }) {
-    return (
-        <li className="tag">{text}</li>
-    )
+function Tag({ text }: TagProps) {
+    return <li className="tag">{text}</li>;
 }
 
 export default Tag;

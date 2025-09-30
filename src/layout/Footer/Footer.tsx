@@ -2,7 +2,7 @@ import LogoFooter from "../../assets/svg/logo-footer.svg";
 import "./Footer.scss";
 
 function Footer() {
-    const year = new Date().getFullYear();
+    const year:number = new Date().getFullYear();
 
     return (
         <footer className="footer">
