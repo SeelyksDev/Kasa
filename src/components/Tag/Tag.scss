@@ -1,10 +1,12 @@
+@import "../../styles/global/variables.scss";
+
 .tag {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ff6060;
+    background-color: $main-color;
     min-width: 84px;
-    color: white;
+    color: $white-color;
     border-radius: 10px;
     font-size: 0.625rem;
     font-weight: 600;

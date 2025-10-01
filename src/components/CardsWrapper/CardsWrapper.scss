@@ -1,6 +1,8 @@
+@import "../../styles/global/variables.scss";
+
 .rental-overview {
     @media screen and (min-width: 1040px) {
-        background-color: #f6f6f6;
+        background-color: $grey-color;
         padding: 56px 50px;
         border-radius: 25px;
         margin-top: 43px;

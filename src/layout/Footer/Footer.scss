@@ -1,9 +1,11 @@
+@import "../../styles/global/variables.scss";
+
 .footer {
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    background-color: black;
+    background-color: $black-color;
     padding: 66px 0 58px 0;
 
     .logo {
@@ -15,7 +17,7 @@
     }
 
     .copyright {
-        color: white;
+        color: $white-color;
         font-size: 0.75rem;
         max-width: 131px;
         text-align: center;

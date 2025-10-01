@@ -26,7 +26,7 @@ function Rental() {
     const currentRental: RentalItem | undefined = rentals.find(
         (element) => element?.id === id
     );
-
+    
     useEffect(() => {
         if (currentRental) {
             document.title = `${currentRental.title} - Kasa`;

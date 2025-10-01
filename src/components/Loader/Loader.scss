@@ -1,3 +1,5 @@
+@import "../../styles/global/variables.scss";
+
 @keyframes spin {
   to {
     transform: rotate(360deg);
@@ -12,8 +14,8 @@
     .loader {
         height: 120px;
         width: 120px;
-        border: 10px solid #ff6060;
-        border-left: 10px  dashed #ff6060;
+        border: 10px solid $main-color;
+        border-left: 10px  dashed $main-color;
         border-bottom: 10px solid transparent;
         border-radius: 50%;
         animation: spin 1s linear infinite;

@@ -1,3 +1,5 @@
+@import "../../styles/global/variables.scss";
+
 .host {
     display: flex;
     align-items: center;
@@ -9,7 +11,7 @@
         align-items: end;
 
         span {
-            color: #ff6060;
+            color: $main-color;
             font-size: 0.75rem;
             font-weight: 500;
 

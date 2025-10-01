@@ -1,3 +1,5 @@
+@import "../../styles/global/variables.scss";
+
 .error-wrapper {
     display: flex;
     align-items: center;
@@ -12,7 +14,7 @@
     }
 
     .error-title {
-        color: #ff6060;
+        color: $main-color;
         font-size: 6rem;
 
         @media screen and (min-width: 1040px) {
@@ -21,7 +23,7 @@
     }
 
     .error-subtitle {
-        color: #ff6060;
+        color: $main-color;
         font-weight: 500;
         font-size: 1.125rem;
         max-width: 260px;

@@ -1,3 +1,5 @@
+@import "../../styles/global/variables.scss";
+
 .header {
     margin-bottom: 27px;
     padding: 20px 20px 0 20px;
@@ -66,13 +68,10 @@
                     text-transform: capitalize;
                     font-size: 1.5rem;
                 }
-
-                a {
-                }
             }
         }
         .active {
-            border-bottom: 1px solid black;
+            border-bottom: 1px solid $black-color;
         }
     }
 }
