@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { getRentals } from "../../utils/api/rentalApi.ts";
 import { getCachedRentals } from "../../utils/store/rentalsStore.ts";
 import { useParams, Navigate } from "react-router";
+import Loader from "../../components/Loader/Loader.tsx";
 import TitleLocation from "../../components/TitleLocation/TitleLocation.tsx";
 import Carousel from "../../components/Carousel/Carousel";
 import Tag from "../../components/Tag/Tag.tsx";
@@ -40,9 +41,7 @@ function Rental() {
 
     if (!currentRental) {
         return (
-            <main className="loader-wrapper">
-                <div className="loader"></div>
-            </main>
+            <Loader />
         );
     }
 
