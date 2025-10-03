@@ -1,4 +1,4 @@
-@import "../../styles/global/variables.scss";
+@use "../../styles/global/variables.scss" as var;
 
 .host {
     display: flex;
@@ -11,7 +11,7 @@
         align-items: end;
 
         span {
-            color: $main-color;
+            color: var.$main-color;
             font-size: 0.75rem;
             font-weight: 500;
 

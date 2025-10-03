@@ -1,4 +1,4 @@
-@import "../../styles/global/variables.scss";
+@use "../../styles/global/variables.scss" as var;
 
 @keyframes spin {
   to {
@@ -14,8 +14,8 @@
     .loader {
         height: 120px;
         width: 120px;
-        border: 10px solid $main-color;
-        border-left: 10px  dashed $main-color;
+        border: 10px solid var.$main-color;
+        border-left: 10px  dashed var.$main-color;
         border-bottom: 10px solid transparent;
         border-radius: 50%;
         animation: spin 1s linear infinite;

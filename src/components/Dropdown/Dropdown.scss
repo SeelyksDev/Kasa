@@ -1,4 +1,4 @@
-@import "../../styles/global/variables.scss";
+@use "../../styles/global/variables.scss" as var;
 
 .dropdown-item {
     overflow: hidden;
@@ -6,7 +6,7 @@
 
     .dropdown-header {
         position: relative;
-        background-color: $main-color;
+        background-color: var.$main-color;
         padding: 10px;
         border-radius: 5px;
         display: flex;
@@ -22,7 +22,7 @@
         span {
             line-height: 142.6%;
             font-weight: bold;
-            color: $white-color;
+            color: var.$white-color;
         }
 
         img.arrow-dropdown {
@@ -57,7 +57,7 @@
         p,
         ul {
             margin-top: -3px;
-            background-color: $grey-color;
+            background-color: var.$grey-color;
             padding: 16px 20px 20px 20px;
             border-radius: 0 0 5px 5px;
             line-height: 142.6%;

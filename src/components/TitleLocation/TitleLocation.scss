@@ -1,4 +1,4 @@
-@import "../../styles/global/variables.scss";
+@use "../../styles/global/variables.scss" as var;
 
 .rental-header {
     margin: 15px 0 10px 0;
@@ -15,7 +15,7 @@
         font-size: 1.125rem;
         font-weight: 500;
         line-height: 142.6%;
-        color: $main-color;
+        color: var.$main-color;
         margin-bottom: 5px;
 
         @media screen and (min-width: 768px) {

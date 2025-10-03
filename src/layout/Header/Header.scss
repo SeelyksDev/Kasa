@@ -1,4 +1,4 @@
-@import "../../styles/global/variables.scss";
+@use "../../styles/global/variables.scss" as var;
 
 .header {
     margin-bottom: 27px;
@@ -71,7 +71,7 @@
             }
         }
         .active {
-            border-bottom: 1px solid $black-color;
+            border-bottom: 1px solid var.$black-color;
         }
     }
 }

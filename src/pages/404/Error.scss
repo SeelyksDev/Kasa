@@ -1,4 +1,4 @@
-@import "../../styles/global/variables.scss";
+@use "../../styles/global/variables.scss" as var;
 
 .error-wrapper {
     display: flex;
@@ -14,7 +14,7 @@
     }
 
     .error-title {
-        color: $main-color;
+        color: var.$main-color;
         font-size: 6rem;
 
         @media screen and (min-width: 1040px) {
@@ -23,7 +23,7 @@
     }
 
     .error-subtitle {
-        color: $main-color;
+        color: var.$main-color;
         font-weight: 500;
         font-size: 1.125rem;
         max-width: 260px;

@@ -1,4 +1,4 @@
-@import "../../styles/global/variables.scss";
+@use "../../styles/global/variables.scss" as var;
 
 .card {
     position: relative;
@@ -55,7 +55,7 @@
             z-index: 3;
             display: flex;
             align-items: flex-end;
-            color: $white-color;
+            color: var.$white-color;
             font-size: 1.125rem;
             height: 100%;
             padding: 15px 20px;

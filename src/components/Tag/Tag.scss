@@ -1,12 +1,12 @@
-@import "../../styles/global/variables.scss";
+@use "../../styles/global/variables.scss" as var;
 
 .tag {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $main-color;
+    background-color: var.$main-color;
     min-width: 84px;
-    color: $white-color;
+    color: var.$white-color;
     border-radius: 10px;
     font-size: 0.625rem;
     font-weight: 600;
