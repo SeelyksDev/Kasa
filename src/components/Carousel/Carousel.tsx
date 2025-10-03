@@ -23,7 +23,7 @@ function Carousel({ pictures }: CarouselProps) {
 
     return (
         <section className="carousel">
-            {pictures.length !== 1 && (
+            {pictures.length > 1 && (
                 <button className="prev-btn" onClick={prevIndex}></button>
             )}
             <img
@@ -31,10 +31,12 @@ function Carousel({ pictures }: CarouselProps) {
                 className="carousel-img"
                 alt="photo du logement"
             />
-            <span className="counter">
-                {currentIndex + 1}/{pictures.length}
-            </span>
-            {pictures.length !== 1 && (
+            {pictures.length > 1 && (
+                <span className="counter">
+                    {currentIndex + 1}/{pictures.length}
+                </span>
+            )}
+            {pictures.length > 1 && (
                 <button className="next-btn" onClick={nextIndex}></button>
             )}
         </section>
